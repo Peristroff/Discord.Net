@@ -186,6 +186,14 @@ online in Discord.
 > having trouble logging in? Double-check whether you have put in
 > the correct credentials and make sure that it is _not_ a client
 > secret, which is different from a token.
+>
+> Environment.GetEnvironmentVariable("DiscordToken") retrieves an
+> environmental variable which has the name DiscordToken. 
+> You are not meant to put your actual token as its parameter. 
+> If you want to hardcode the token, which is highly discouraged, 
+> especially if you plan on distributing the application,
+> you should get rid of the Environment.GetEnvironmentVariable() 
+> method and use the token string directly.
 
 > [!WARNING]
 > Encountering a `PlatformNotSupportedException` when starting your bot?
